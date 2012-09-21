@@ -1,0 +1,3 @@
+<ul>
+    <li tal:repeat="item names">name: ${item['name']}, surname:${item['surname']}</li>
+</ul>

@@ -1,0 +1,33 @@
+## -*- coding: utf-8 -*-
+------------------------------------------------------------------------
+                            Contabilidade
+------------------------------------------------------------------------
+
+num. registros: ${len(periodos)}
+
+% for idx, per in enumerate(periodos):
+codigo: ${idx+1}  seq: ${per.seq}      periodo: ${per.periodo}   id: ${per._id}
+balanço: ${per.balanco[0]}    credito: ${per.balanco[1]}    debito: ${per.balanco[2]}
+
+creditos:
+     ------------------------------------------
+    |  cd       nome         periodo    valor  |
+    |------------------------------------------|
+% for icr, cred in enumerate(per.creditos):
+    |${'%3s   %-15s  %8s  %8s' % (icr+1, cred.nome, cred.periodo, cred.valor)} |
+% endfor
+    -------------------------------------------
+    
+pagamentos:
+   --------------------------------------------------------------------
+  | cd     nome             valor    pago         tipo                 |
+   --------------------------------------------------------------------
+% for ip, pag in enumerate(per.pagamentos):
+  |${'%3s %s   %-14s  %8s   %5s   %-25s  ' % (ip+1, pag.seq, pag.nome, pag.valor, pag.pago, pag.tipo)}|
+% endfor
+   --------------------------------------------------------------------
+
+
+% endfor 
+------------------------------------------------------------------------
+
