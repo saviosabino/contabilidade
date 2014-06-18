@@ -1,7 +1,5 @@
 # coding: utf-8
 
-import utils as mu
-import pymongo as pm
 import minimongo as mm
 
 class Credito(mm.AttrDict):
@@ -111,7 +109,7 @@ class Root(dict):
         #periodo.__parent__ = self
         
 '''
-prototipo urlmap:
+prototype urlmap:
 url                     desc
 -------------------------------------------------
 /                       index - welcome 

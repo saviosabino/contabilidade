@@ -1,5 +1,17 @@
-*.py[co]
+.projects
+.pydevproject
+.hg
+*.hg
+.hgignore
+./*/.git
+./*/*/.git
+./*/.hg
+./*/*/.hg
+*.pyc
+*.pyo
 *.swp
+*~
+.oldhg
 
 # Packages
 *.egg
@@ -21,8 +33,4 @@ pip-log.txt
 .coverage
 .tox
 
-#Translations
-*.mo
 
-#Mr Developer
-.mr.developer.cfg
